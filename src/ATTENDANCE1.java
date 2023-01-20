@@ -63,9 +63,6 @@ public class ATTENDANCE1 extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        YR = new javax.swing.JRadioButton();
-        NR = new javax.swing.JRadioButton();
         jLabel8 = new javax.swing.JLabel();
         time = new com.toedter.calendar.JDateChooser();
         jPanel4 = new javax.swing.JPanel();
@@ -100,26 +97,6 @@ public class ATTENDANCE1 extends javax.swing.JFrame {
 
         jLabel5.setText("DATE");
 
-        jLabel6.setText("ATTENDENCY");
-
-        YR.setBackground(new java.awt.Color(204, 204, 204));
-        buttonGroup1.add(YR);
-        YR.setText("YES");
-        YR.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                YRActionPerformed(evt);
-            }
-        });
-
-        NR.setBackground(new java.awt.Color(204, 204, 204));
-        buttonGroup1.add(NR);
-        NR.setText("NO");
-        NR.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                NRActionPerformed(evt);
-            }
-        });
-
         jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(0, 102, 102));
         jLabel8.setText("EMPLOYEE ATTENDANCE FORM");
@@ -149,19 +126,12 @@ public class ATTENDANCE1 extends javax.swing.JFrame {
                         .addGroup(IDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 126, Short.MAX_VALUE)
                             .addGroup(IDLayout.createSequentialGroup()
-                                .addGroup(IDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, Short.MAX_VALUE)))
-                        .addGap(18, 18, Short.MAX_VALUE)
-                        .addGroup(IDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(IDLayout.createSequentialGroup()
-                                .addComponent(YR, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(NR, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(IDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(time, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(Lname, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addGap(18, 19, Short.MAX_VALUE)
+                        .addGroup(IDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(time, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Lname, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap())
         );
         IDLayout.setVerticalGroup(
@@ -185,13 +155,7 @@ public class ATTENDANCE1 extends javax.swing.JFrame {
                 .addGroup(IDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(time, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(36, 36, 36)
-                .addGroup(IDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(IDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(YR)
-                        .addComponent(NR)))
-                .addContainerGap(40, Short.MAX_VALUE))
+                .addContainerGap(102, Short.MAX_VALUE))
         );
 
         jPanel1.add(ID, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 120, 320, 340));
@@ -207,11 +171,11 @@ public class ATTENDANCE1 extends javax.swing.JFrame {
 
             },
             new String [] {
-                "EMPLOYEE ID", "FIRSTNAME", "LASTNAME", "DATE", "ATTENDENCY"
+                "EMPLOYEE ID", "FIRSTNAME", "LASTNAME", "DATE"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -297,7 +261,7 @@ public class ATTENDANCE1 extends javax.swing.JFrame {
 
         jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel11.setText("Home");
+        jLabel11.setText("Back");
         jLabel11.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel11MouseClicked(evt);
@@ -334,7 +298,7 @@ public class ATTENDANCE1 extends javax.swing.JFrame {
      }
         else{
             
-            String data[] = {EMPLOYEE_ID.getText(), Fname.getText(), Lname.getText(),time.getDate().toString(),decision};
+            String data[] = {EMPLOYEE_ID.getText(), Fname.getText(), Lname.getText(),time.getDate().toString()};
             
             DefaultTableModel tblModel = (DefaultTableModel)attendtable.getModel();
             
@@ -356,12 +320,12 @@ public class ATTENDANCE1 extends javax.swing.JFrame {
      
   Class.forName("com.mysql.jdbc.Driver");
   Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/employeemgt","root","");
-  PreparedStatement ps=conn.prepareStatement("INSERT INTO  attendancy(ID,Fname,Lname,arrival_time,decision) values(?,?,?,?,?)");
+  PreparedStatement ps=conn.prepareStatement("INSERT INTO  attendancy(ID,Fname,Lname,arrival_time) values(?,?,?,?)");
   ps.setString(1, EMPLOYEE_ID.getText());
   ps.setString(2, Fname.getText());
   ps.setString(3, Lname.getText());
   ps.setString(4, time.getDate().toString());
-  ps.setString(5, decision);
+  //ps.setString(5, decision);
    
   ps.executeUpdate();
     
@@ -375,20 +339,10 @@ public class ATTENDANCE1 extends javax.swing.JFrame {
 
 // TODO add your handling code here:
     }//GEN-LAST:event_saveActionPerformed
-
-    private void YRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_YRActionPerformed
-       decision="YES";
-        // TODO add your handling code here:
-    }//GEN-LAST:event_YRActionPerformed
-
-    private void NRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NRActionPerformed
- decision="NO";
-        // TODO add your handling code here:
-    }//GEN-LAST:event_NRActionPerformed
-
+/**/
     private void jLabel11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MouseClicked
         // TODO add your handling code here:
-      home menu=new home();
+      loginF menu=new loginF();
           menu.setVisible(true);
            setVisible(false);
             
@@ -400,8 +354,8 @@ public class ATTENDANCE1 extends javax.swing.JFrame {
         Fname.setText("");
         Lname.setText("");
         time.setCalendar(null);
-        YR.setSelected(false);
-        NR.setSelected(false);
+        //YR.setSelected(false);
+        //NR.setSelected(false);
         
     }//GEN-LAST:event_clrbtnActionPerformed
 
@@ -446,8 +400,6 @@ public class ATTENDANCE1 extends javax.swing.JFrame {
     private javax.swing.JTextField Fname;
     private javax.swing.JPanel ID;
     private javax.swing.JTextField Lname;
-    private javax.swing.JRadioButton NR;
-    private javax.swing.JRadioButton YR;
     private javax.swing.JTable attendtable;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton clrbtn;
@@ -457,7 +409,6 @@ public class ATTENDANCE1 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;

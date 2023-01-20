@@ -67,14 +67,14 @@ public class attendancelist extends javax.swing.JFrame {
 
             },
             new String [] {
-                "EMPLOYEE ID", "first name", "last name", "date", "attendancy"
+                "EMPLOYEE ID", "first name", "last name", "date"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
             boolean[] canEdit = new boolean [] {
-                false, true, true, true, true
+                false, true, true, true
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -103,7 +103,6 @@ public class attendancelist extends javax.swing.JFrame {
         jButton3.setBackground(new java.awt.Color(0, 0, 153));
         jButton3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setIcon(new javax.swing.ImageIcon("C:\\Users\\REBECCA\\Desktop\\icons\\print-icon.png")); // NOI18N
         jButton3.setText("print");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -219,7 +218,7 @@ public class attendancelist extends javax.swing.JFrame {
             columnData.add(rs.getString("Fname"));
             columnData.add(rs.getString("Lname"));
             columnData.add(rs.getString("arrival_time"));
-            columnData.add(rs.getString("decision"));
+           // columnData.add(rs.getString("decision"));
           // columnData.add(rs.getString("post"));
             //columnData.add(rs.getString("annual_salary"));
             //columnData.add(rs.getString("gender"));
